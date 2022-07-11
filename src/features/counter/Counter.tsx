@@ -5,11 +5,11 @@ import {
   decrement,
   increment,
   incrementByAmount,
-  incrementAsync,
-  incrementIfOdd,
   selectCount,
+  incrementAsync
 } from './counterSlice';
 import styles from './Counter.module.css';
+import { incrementIfOdd } from './saga/actions';
 
 export function Counter() {
   const count = useAppSelector(selectCount);
@@ -66,3 +66,5 @@ export function Counter() {
     </div>
   );
 }
+
+
